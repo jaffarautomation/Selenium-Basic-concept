@@ -1,0 +1,29 @@
+package Class43_Hidden_elements;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HiddenElements {
+
+	
+	
+public static void main(String[] args) throws Throwable {
+
+		
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+
+		// Start browser
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-automate-radio-button-in.html");
+		
+		//In below code xpath was matching with 2 node, so in this case selenium will always click on first node. in your case it is hidden element.
+		
+		  driver.findElement(By.xpath("//input[@id='male']")).click();
+		
+		
+		
+		
+}}

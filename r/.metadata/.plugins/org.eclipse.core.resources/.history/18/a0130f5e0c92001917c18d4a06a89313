@@ -1,0 +1,19 @@
+package RunningThroughXML;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class ParallelRunningOfClass {
+  
+	@Test
+	public void Regression()
+	{
+		System.out.println("Regression 1 started");
+	}
+	
+	
+}

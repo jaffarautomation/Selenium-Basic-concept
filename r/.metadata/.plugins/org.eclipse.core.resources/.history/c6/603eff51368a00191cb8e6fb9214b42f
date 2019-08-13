@@ -1,0 +1,53 @@
+package SeleniumClass23_CreateTestCases;
+
+
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class IRCTCcheck_Dynamiccheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		
+
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.co.in/");
+		WebElement t = driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.RNNXgb > div > div.a4bIc > input"));
+		t.sendKeys("irctc");
+		driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.FPdoLc.VlcLAe > center > input[type=submit]:nth-child(1)")).click();
+		
+	List<WebElement> t1=driver.findElements(By.partialLinkText("IRCTC"));
+	int a = t1.size();
+	System.out.println(a);
+	
+	
+	for(int i =0;i<a;i++)
+	{
+		
+		String y = t1.get(i).getText();
+		
+		if (y.contains("IRCTC Next Generation eTicketing System"))
+		{
+			System.out.println(y);
+			t1.get(i).click();
+		}
+	}
+		
+	// below code will throw following because we have navigate to other page and using t1 variable from different page
+	//The most frequent cause of this is that page that the element was part of has been refreshed, or the user has navigated away to another page. 
+	
+
+
+	
+	}	
+}

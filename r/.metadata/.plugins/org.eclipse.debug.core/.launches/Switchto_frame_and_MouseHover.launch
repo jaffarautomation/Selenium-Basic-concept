@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/selenium/src/SeleniumWebDriver_HandlingElementPart_3/Switchto_frame_and_MouseHover.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="SeleniumWebDriver_HandlingElementPart_3.Switchto_frame_and_MouseHover"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="selenium"/>
+</launchConfiguration>

@@ -1,0 +1,26 @@
+package JavaOtherConcept;
+
+public class callbyvalues_references {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		callbyvalues_references obj = new callbyvalues_references();
+		
+		int j =obj.method(10, 60);
+		System.out.println(j);
+		
+	}
+	
+	
+	public int method(int a, int b)
+	{
+		
+		int c = a+b;
+		return c;
+		
+	}
+
+}

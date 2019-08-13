@@ -1,0 +1,105 @@
+package DataDrivenFramework_TestNG_Part2;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
+
+public class With_Excel_different_method {
+
+	WebDriver driver;
+	
+	@Test(dataProvider = "Database")
+	public void read(String username,String password) throws InterruptedException
+	{
+
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		
+			 driver = new ChromeDriver();
+			 
+			 driver.get("http://www.gcrit.com/build3/login.php");
+			 
+			 driver.manage().window().maximize();
+			 
+			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			 
+			 driver.findElement(By.name("email_address")).sendKeys(username);
+			 
+			 driver.findElement(By.name("password")).sendKeys(password);
+			 driver.findElement(By.cssSelector("#tdb5 > span.ui-button-text")).click();
+			 
+			
+			 
+			 Thread.sleep(3000);
+			 
+			 
+			 Assert.assertTrue(driver.getTitle().contains("G"), "unable to login");
+			 
+			 System.out.println("Successfully login 1");
+			 
+		
+		
+	}
+	
+	
+	
+	@DataProvider(name = "Database")
+	@SuppressWarnings({ "resource", "unused" })
+	public Object[][] database() throws Throwable
+	{
+		
+		File Excelfile = new File ("F:\\Selenium\\Excel file\\Data - Copy1.xls");
+		
+		//FileInputStream Object = new FileInputStream(Excelfile);
+		
+		 Workbook w;
+
+		 w = Workbook.getWorkbook(Excelfile);
+		
+		//XSSFWorkbook workbook = new XSSFWorkbook(Object);
+		
+		Sheet sheet = w.getSheet(0);
+		
+		int totalrows =sheet.getRows();
+		
+		System.out.println(totalrows);
+		
+	
+		
+		int column =sheet.getColumns();
+		
+		String inputdata [] [] = new String [totalrows][column];
+		
+		System.out.println(column);
+		
+		for(int i =0; i<totalrows;i++)
+		{
+			
+			for(int j=0;j<column;j++)
+			{
+				Cell y = sheet.getCell(i,j);
+				inputdata[i][j] = y.getContents();
+			}
+		}
+		
+		
+		return inputdata;
+		
+		
+		
+		
+	}
+}

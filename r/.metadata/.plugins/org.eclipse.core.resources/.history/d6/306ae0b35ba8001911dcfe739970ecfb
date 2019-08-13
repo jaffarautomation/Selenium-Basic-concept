@@ -1,0 +1,28 @@
+package Class41_mousehover;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseHover {
+
+public static void main(String[] args) {
+
+		
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+
+		// Start browser
+		WebDriver driver = new ChromeDriver();
+	
+		WebElement elment = driver.findElement(By.xpath("//*[@id='post-body-4229879368008023176']/div[1]/div[2]/button"));
+		
+		
+	Actions Action = new Actions(driver);
+	
+	Action.moveToElement(elment);
+	
+	
+}}

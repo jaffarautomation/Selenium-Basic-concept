@@ -1,0 +1,43 @@
+package SeleniumClass23_CreateTestCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TocheckInternalorExternallink {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://en.wikipedia.org/wiki/Selenium_(software)");
+		
+		driver.findElement(By.linkText("Create account")).click();
+	String url =	driver.getCurrentUrl();
+	
+	if(url.contains("wikipedia"))
+	{
+		System.out.println("Internal link");
+	}
+	else{
+			System.out.println("External link ");}
+	
+	driver.navigate().back();
+	driver.findElement(By.xpath("//*[@id=mw-content-text]/div/table[2]/tbody/tr[5]/td/div/ul/li/span/a")).click();
+	
+	url =driver.getCurrentUrl();
+	if(url.contains("wikipedia"))
+	{
+		System.out.println("Internal link");
+	}
+	else{
+			System.out.println("External link ");}
+	
+	
+		
+	}
+
+}

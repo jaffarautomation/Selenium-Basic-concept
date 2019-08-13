@@ -1,0 +1,57 @@
+package TestNG_Basic_Concept;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Multiple_cases2 {
+
+	
+	@BeforeClass
+	public void login()
+	{
+		System.out.println("Login successfull");
+	}
+	
+	@BeforeTest
+	public void login1()
+	{
+		System.out.println("Login successfull");
+	}
+	
+	@Test (priority =1)
+	public void Search()
+	{
+		System.out.println("Search successfull");
+	}
+	
+	@Test(priority =2)
+	public void Search1()
+	{
+		System.out.println(" search1 successfull");
+	}
+	
+	@Test (priority =3)
+	public void AdvanceSearch1()
+	{
+		System.out.println("Advance search successfull");
+		
+	}
+	
+	
+	@AfterTest 
+	public void Logou2t() 
+	{
+		System.out.println("Logout successfull");
+	}
+	
+	@AfterClass 
+	public void Logout() 
+	{
+		System.out.println("Logout successfull");
+	}
+}

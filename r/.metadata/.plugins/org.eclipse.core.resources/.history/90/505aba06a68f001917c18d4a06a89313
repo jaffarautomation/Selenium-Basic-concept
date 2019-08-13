@@ -1,0 +1,41 @@
+package TestNG_Basic_Concept;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class VerifyTitle_ofpage_using_Assert {
+	
+	public static WebDriver driver ;
+	
+@Test
+	public void createinstance()
+	{
+		driver = new ChromeDriver();
+		
+	}
+@Test
+public void verifytitle()
+{
+	
+	driver.get("https://www.google.co.in/");
+	System.out.println("Title of the page is " + driver.getTitle());
+	Assert.assertEquals("Google", driver.getTitle());
+}
+
+
+public void verifytitle2()
+{
+	
+	driver.get("https://in.yahoo.com/?p=us");
+	System.out.println("Title of the page is " + driver.getTitle());
+	Assert.assertEquals("Google", driver.getTitle());
+}
+@Test
+public void close()
+{
+	driver.close();
+	}
+
+}

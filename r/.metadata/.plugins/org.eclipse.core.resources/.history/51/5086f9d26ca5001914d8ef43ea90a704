@@ -1,0 +1,40 @@
+package DataDrivenFramework_part1;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Lib {
+
+	XSSFWorkbook workbook;
+	XSSFSheet sheet;
+	
+ public void Lib (String filepath) throws Throwable
+ {
+	 
+	 
+	 File filepathvalue = new File(filepath);
+	 
+	 FileInputStream value1 = new FileInputStream(filepathvalue);
+	 
+	  workbook = new XSSFWorkbook(value1);
+	
+ }
+ 
+ 
+ 
+ //This method will fetch the value to cell in excel sheet 
+  public String getdata (int sheetnumber, int row, int column)
+  {
+	  
+	  sheet= workbook.getSheetAt(sheetnumber);
+	 String data=  sheet.getRow(row).getCell(column).getStringCellValue();
+	  return data;
+  }
+  
+  
+	
+}

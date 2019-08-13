@@ -1,0 +1,15 @@
+package SeleniumClass_25;
+
+public class Testcase1 extends Methods{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Testcase1 obj = new Testcase1();
+		obj.launchbrowser();
+		obj.AdminLogin();
+		
+		
+	}
+
+}

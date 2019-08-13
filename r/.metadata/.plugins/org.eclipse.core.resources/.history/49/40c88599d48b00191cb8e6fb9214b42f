@@ -1,0 +1,10 @@
+package SeleniumClass_24;
+
+public class Login_positive_negative_cases {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

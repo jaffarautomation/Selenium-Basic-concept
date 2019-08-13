@@ -1,0 +1,18 @@
+package SeleniumClass13;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String t1 = "selenium";
+		String t2 = "SELENIUM";
+		String t3 = "seleniuma";
+		String t4 = "selenium";
+		
+		System.out.println(t1.compareTo(t2));
+		System.out.println(t1.compareTo(t4));
+		System.out.println(t1.compareTo(t3));
+	}
+
+}

@@ -1,0 +1,36 @@
+package RunningThroughXML_part4_parallelExecution;
+
+import org.testng.annotations.Test;
+
+public class paraleel_methods {
+	
+	
+	@Test
+	public void method1()
+	{
+		System.out.println("In method 1");
+		
+	}
+
+	@Test
+	public void method2()
+	{
+		System.out.println("In method 1");
+		
+	}
+	
+	@Test
+	public void method3()
+	{
+		System.out.println("In method 1");
+		
+	}
+	
+	@Test
+	public void method4()
+	{
+		System.out.println("In method 1");
+		
+	}
+}
+

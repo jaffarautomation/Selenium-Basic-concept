@@ -1,0 +1,48 @@
+package HandlingFrames;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class Frames {
+
+	
+	// Here we will see how to naviagte toframe using webelment method
+	
+	
+	
+	@Test
+	public void frames()
+	{
+
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+
+		// Start browser
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.toolsqa.com/iframe-practice-page/");
+		
+		// Storing iframe xpath in frame reference
+WebElement frame =driver.findElement(By.xpath("//iframe[@name = 'iframe2']"));
+		
+
+// in below code we are switching frame by webelement way
+		driver.switchTo().frame(frame);
+		
+		// below code will validate we are in frame
+	boolean value =	driver.findElement(By.xpath("//a[text() = 'Selectable']")).isEnabled();
+		
+	System.out.println(value);
+	
+	
+	// to count no of frame in webpage
+	
+	int x= driver.findElements(By.xpath("//iframe")).size();
+		
+	System.out.println("No of frame in webpage are " + x );
+	
+	
+	}
+}

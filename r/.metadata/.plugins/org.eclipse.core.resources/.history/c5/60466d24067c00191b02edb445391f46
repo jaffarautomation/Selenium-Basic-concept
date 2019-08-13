@@ -1,0 +1,14 @@
+package SeleniumClass13;
+
+public class IntergerMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double a =109.94;
+		double b = -46.45;
+		System.out.println(Math.abs(a));
+		System.out.println(Math.abs(b));
+	}
+
+}

@@ -1,0 +1,48 @@
+package JavaOtherConcept;
+
+import javax.sound.midi.Soundbank;
+
+public class callbyvalues_references {
+	
+	
+	int y;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		
+		callbyvalues_references obj = new callbyvalues_references();
+		
+		int mum = 25;
+		System.out.println("Before calling the display method " + mum);
+		display(mum);
+		System.out.println("After calling the display method = "+ mum);
+		
+		
+		
+		
+		// Here value of int mum is 25, it is global variable and it belong to main method only.
+		
+	}
+	
+	
+	
+	
+	
+	public static void display(int num)
+	{
+		
+		//here int num is local variable, i.e belongs to only display method
+		
+		System.out.println("The value of number inside the display method = " + num);
+		num =100;
+		System.out.println("The value of number inside the display method = " + num);
+		
+		
+	}
+	
+	
+
+}

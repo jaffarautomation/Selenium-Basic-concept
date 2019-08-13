@@ -1,0 +1,56 @@
+package RunningThroughXML_part2_Grouping;
+
+import org.testng.annotations.Test;
+
+// Grouping of methods.
+// In this we group method according to functionality or according to test process i.e regression or sanity.
+
+//first we run the group which include sanity. Method 1,2,3,4 we execute. Method 4 because it contain sanity and also regression group tag.
+
+
+
+
+
+
+
+public class Group {
+
+	
+	@Test(groups = {"Sanity"})
+	public void method1()
+	{
+		System.out.println("This come under sanity test method 1");
+	}
+	
+	@Test (groups = {"Sanity"})
+	public void method2()
+	{
+		System.out.println("This come under sanity test method 2");
+	}
+	
+	@Test (groups ={"Sanity"})
+	public void method3()
+	{
+		System.out.println("This come under sanity test method 3");
+	}
+	
+
+
+	@Test(groups ={"Regression", "Sanity"})
+	public void method4 ()
+	{
+		System.out.println("This come under regression and sanity  test method 4");
+	}
+	
+	@Test(groups ={"Regression"})
+	public void method5()
+	{
+		System.out.println("This come under regression  test method 5");
+	}
+	
+	@Test(groups ={"Regression"})
+	public void method6()
+	{
+		System.out.println("This come under regression  test method 6");
+	}
+}

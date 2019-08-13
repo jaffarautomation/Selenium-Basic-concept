@@ -1,0 +1,29 @@
+package SeleniumClass13;
+
+public class IntergerMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		// abs -> method returns the absolute values
+		
+		double a =109.94;
+		double b = -46.45;
+		System.out.println(Math.abs(a));
+		System.out.println(Math.abs(b));
+		
+		//round () method  -> it return only interger values no decimal 
+		System.out.println(Math.round(a));
+		System.out.println(Math.round(b));
+		
+		
+		// Min () method -> it return the min values
+		System.out.println(Math.min(a, b)); // output is -46.45 i.e b , because it is smaller than a.
+		
+		
+		// Max () method -> same as min method, but return the max values.
+		
+		
+	}
+
+}

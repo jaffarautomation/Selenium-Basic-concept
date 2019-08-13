@@ -1,0 +1,83 @@
+package SeleniumWebDriverMethod;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class EndtoEndFlowUsingallMethod {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+		
+//Handling browser and Edit box in selenium, a complete END to END flow.		
+		/*
+		driver.get("https://www.facebook.com/");
+		String A1=driver.getCurrentUrl();
+        System.out.println(A1);
+        
+       String A2 = driver.getTitle();
+       System.out.println(A2);
+        
+        driver.manage().window().maximize();
+        
+        driver.navigate().to("https://www.google.co.in/");
+        A1=driver.getCurrentUrl();
+        System.out.println(A1);
+        
+        driver.navigate().back();  // facebook
+        A1=driver.getCurrentUrl();
+        System.out.println(A1);
+       
+        
+        driver.navigate().refresh();   //facebook
+        A1=driver.getCurrentUrl();
+        System.out.println(A1);
+        
+        // Starting of handling  Edit box
+        
+       WebElement s1 =  driver.findElement(By.className("inputtext"));
+       boolean display =s1.isDisplayed();   // return true
+       System.out.println(display);
+       
+       boolean enabled = s1.isEnabled();   // return true
+       System.out.println(enabled);
+       
+       s1.sendKeys("facebook");  // enter facebook as a value
+       
+       String text =s1.getText();  // return the value facebook
+       System.out.println("return the value from email or phone edit box = " + text);
+       
+       s1.clear();  // clear the value i.e facebook
+       */
+  //********************************************************************************************     
+        
+        // Handling a text area  in selenium 
+		
+		// a) Below code return the text area of the particular field in gmail page
+       
+       driver.navigate().to("https://accounts.google.com/signin/v2/sl/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+        WebElement E1= driver.findElement(By.cssSelector("#headingText > span"));
+        String E2 = E1.getText();
+        System.out.println(E2);
+        
+        String E4 = E1.getTagName();
+        System.out.println(E4);
+        
+        // b) Below code capture the error message on gmail page if user click on sign in button without entering the email id
+        
+          driver.findElement(By.cssSelector("#identifierNext > content > span")).click();
+          String geterror = driver.findElement(By.className("GQ8Pzc")).getText();
+          System.out.println(geterror);
+        
+          
+	}
+
+}

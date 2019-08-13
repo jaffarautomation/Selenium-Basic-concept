@@ -1,0 +1,73 @@
+package SeleniumClass23_CreateTestCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class VerifyCustomerCanRegisterSuccessfully {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		
+	//	To verify the User can register successfully
+
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://www.gcrit.com/build3/create_account.php");
+		
+		driver.findElement(By.cssSelector("#bodyContent > form > div > div:nth-child(2) > table > tbody > tr:nth-child(1) > td.fieldValue > input[type=radio]:nth-child(1)")).click();
+		
+		//Enter first name
+		WebElement name =driver.findElement(By.cssSelector("#bodyContent > form > div > div:nth-child(2) > table > tbody > tr:nth-child(2) > td.fieldValue > input[type=text]"));
+			name.click();
+			name.sendKeys("maha purush");
+	// Enter last name
+			WebElement lastname =driver.findElement(By.cssSelector("#bodyContent > form > div > div:nth-child(2) > table > tbody > tr:nth-child(3) > td.fieldValue > input[type=text]"));
+			lastname.click();
+			lastname.sendKeys("johnny sins");
+			
+			//Enter the date
+			WebElement Date =driver.findElement(By.name("dob"));
+			
+			//Date.click();
+			Date.sendKeys("02/05/1746");
+			lastname.click();
+			Thread.sleep(3000);
+			
+			//Enter address
+			WebElement Add =driver.findElement(By.name("street_address"));
+			Add.click();
+			Add.sendKeys("bhok mai jaa");
+			
+			//Enter pincode
+			WebElement pincode =driver.findElement(By.name("postcode"));
+			pincode.click();
+			pincode.sendKeys("420420");
+			
+			//Enter city
+			WebElement city =driver.findElement(By.name("city"));
+			city.click();
+			city.sendKeys("trump city");
+			
+			//Enter state
+			WebElement state =driver.findElement(By.name("state"));
+			state.click();
+			state.sendKeys("bihar");
+			
+			WebElement country =driver.findElement(By.name("country"));
+			
+			Select dropdown = new Select(country);
+			dropdown.selectByValue("Jordan");
+			
+			
+	
+	
+	}
+
+}

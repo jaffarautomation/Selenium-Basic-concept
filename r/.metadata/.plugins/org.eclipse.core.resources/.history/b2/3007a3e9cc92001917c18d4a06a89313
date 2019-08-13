@@ -1,0 +1,28 @@
+package RunningThroughXML_part2_Grouping;
+
+import org.testng.annotations.Test;
+
+public class grouping2 {
+
+	@Test (groups = {"Sanity"})
+	public void method1()
+	{
+		
+		System.out.println("In grouping 2 class, sanity group method 1");
+	}
+	
+	
+	@Test (groups = {"Sanity"})
+	public void method2()
+	{
+		
+		System.out.println("In grouping 2 class, sanity group method 2");
+	}
+	
+	@Test (groups ={"Regression"})
+	public void method3()
+	{
+		
+		System.out.println("In grouping 2 class, sanity group");
+	}
+}

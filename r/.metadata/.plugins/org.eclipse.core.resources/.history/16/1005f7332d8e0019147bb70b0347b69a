@@ -1,0 +1,67 @@
+package SeleniumClass_25;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Methods {
+	// Creating user defined methods 
+	
+	
+	public static WebDriver driver;
+	
+	public void launchbrowser()
+	{
+		driver= new ChromeDriver();
+		 
+	}
+	
+	
+	
+	public void AdminLogin ()
+	{
+         driver.get("http://www.gcrit.com/build3/login.php");
+		driver.findElement(By.cssSelector("#bodyContent > div:nth-child(3) > div > form > table > tbody > tr:nth-child(1) > td.fieldValue > input[type=text]")).sendKeys("johnnybaba@gmail.com");
+		driver.findElement(By.cssSelector("#bodyContent > div:nth-child(3) > div > form > table > tbody > tr:nth-child(2) > td.fieldValue > input[type=password]")).sendKeys("johnnybaba");
+		
+		driver.findElement(By.cssSelector("#tdb5 > span.ui-button-text")).click();
+		}
+	
+	public void AdminLogin (String username, String password)
+	{
+		 driver.get("http://www.gcrit.com/build3/login.php");
+			driver.findElement(By.cssSelector("#bodyContent > div:nth-child(3) > div > form > table > tbody > tr:nth-child(1) > td.fieldValue > input[type=text]")).sendKeys(username);
+			driver.findElement(By.cssSelector("#bodyContent > div:nth-child(3) > div > form > table > tbody > tr:nth-child(2) > td.fieldValue > input[type=password]")).sendKeys(password);
+			
+			driver.findElement(By.cssSelector("#tdb5 > span.ui-button-text")).click();
+		
+	}
+	
+	public void close()
+	{
+		
+		driver.close();
+		/*if(!driver.toString().contains("null"))
+		{
+			driver.close();
+		}*/
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+	// If you comment out below code, it will throw the nullpointerexception error
+		//driver = new ChromeDriver();
+		Methods obj = new Methods();
+		obj.launchbrowser();
+		obj.AdminLogin();
+		obj.close();
+		obj.launchbrowser();
+		obj.AdminLogin("baba", "baba");
+        obj.close();
+	}
+
+}

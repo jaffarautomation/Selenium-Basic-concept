@@ -1,0 +1,10 @@
+package SeleniumClass_24;
+
+public class Different_Browser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

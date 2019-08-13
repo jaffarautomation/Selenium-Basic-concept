@@ -1,0 +1,41 @@
+package JavaOtherConcept;
+
+public class mariyacalculator {
+
+	
+	int mummy ;
+	int papa ;
+	int bhai;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		mariyacalculator mariyahouseaddress = new mariyacalculator();
+		
+		
+		mariyahouseaddress.mummy= 500;
+		mariyahouseaddress.papa = 1000;
+		
+		
+		mariyahouseaddress.bhai = mariyahouseaddress.mummy + mariyahouseaddress.papa;
+		
+		System.out.println("maine tere bhai ko paise diya " + mariyahouseaddress.bhai);
+
+		
+		if(mariyahouseaddress.bhai==1500)
+		{
+			
+			System.out.println("mariya plz kiss me on lips, ok i will");
+		}
+		
+		else
+		{
+			
+			System.out.println("jaffar londa bohat kanjus hai");
+		}
+	}
+	
+	
+	
+
+}

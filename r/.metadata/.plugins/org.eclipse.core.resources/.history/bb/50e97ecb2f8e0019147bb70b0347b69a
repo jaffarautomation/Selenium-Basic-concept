@@ -1,0 +1,19 @@
+package SeleniumClass_25;
+
+public class Testcase1 extends Methods{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		
+		Testcase1 obj = new Testcase1();
+		
+		
+		obj.launchbrowser();
+		obj.AdminLogin();
+		
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+package SeleniumClass23_CreateTestCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class IRCTCcheck_Dynamiccheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	System.setProperty("webdriver.chrome.driver","F:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		
+
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.co.in/");
+		WebElement t = driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.RNNXgb > div > div.a4bIc > input"));
+		t.sendKeys("irctc");
+		driver.findElement(By.cssSelector("#tsf > div:nth-child(2) > div > div.FPdoLc.VlcLAe > center > input[type=submit]:nth-child(1)")).click();
+		
+		
+		
+	}
+	
+
+}

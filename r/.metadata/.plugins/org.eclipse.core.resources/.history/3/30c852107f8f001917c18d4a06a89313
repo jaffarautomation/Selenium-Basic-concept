@@ -1,0 +1,66 @@
+package TestNG_Basic_Concept;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Multiple_cases {
+
+	
+	//Here test case will execute in Alpha order mean according to test methods names
+	//If you want to control test execution process then use priority attribute.
+	
+	
+	/*
+	@Test(priority =3)   // third one
+	public void testA()
+	{
+		Assert.assertEquals("gmail", "gmail");
+		
+	}
+	
+	@Test(priority =2, enabled = false)   // second one
+	public void testC()
+	{
+		
+		Assert.assertEquals("gmail", "gmail");
+	}
+	
+	
+	
+	@Test (priority =1)  // First one to execute
+	public void testB()
+	{
+		Assert.assertEquals("gmail", "gmail");
+		
+	}
+	
+	*/
+	
+	
+	// If priority is not added then it will execute method in alpa order
+	
+	@Test
+	public void login()
+	{
+		System.out.println("Login successfull");
+	}
+	
+	@Test (dependsOnMethods = {"login"})
+	public void Search()
+	{
+		System.out.println("Search successfull");
+	}
+	
+	@Test (dependsOnMethods = {"Search"})
+	public void AdvanceSearch()
+	{
+		System.out.println("Advance search successfull");
+	}
+	
+	@Test (dependsOnMethods = {"AdvanceSearch"})
+	public void Logout() 
+	{
+		System.out.println("Logout successfull");
+	}
+	
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/selenium/TestNG_framework/RunningThroughXML_part2_Grouping/zainab.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="RunningThroughXML_part2_Grouping.zainab"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="selenium"/>
+</launchConfiguration>

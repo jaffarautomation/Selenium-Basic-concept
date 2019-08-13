@@ -1,0 +1,32 @@
+package JavaOtherConcept;
+
+import javax.sound.midi.Soundbank;
+
+public class callbyvalues_references {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		callbyvalues_references obj = new callbyvalues_references();
+		
+		int mum = 25;
+		System.out.println("Before calling the display method " + mum);
+		display(mum);
+		System.out.println("After calling the display method = "+ mum);
+		
+	}
+	
+	
+	public static void display(int num)
+	{
+		
+		System.out.println("The value of number inside the display method = " + num);
+		num =100;
+		System.out.println("The value of number inside the display method = " + num);
+	}
+	
+	
+
+}

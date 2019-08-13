@@ -1,0 +1,5 @@
+package JavaOtherConcept;
+
+public @interface CustomAnnoation {
+
+}
